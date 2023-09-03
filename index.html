@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dialog Box</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jura:wght@400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <!-- Subscribe Button -->
+  <button class="subscribe-btn" onclick="showModal()">Subscribe <span class="icon bell"></span></button>
+
+  <!-- Dialog Box -->
+  <dialog>
+    <header>
+      <h2>Latest News & Exclusive Offers!</h2>
+      <div class="icon close-btn" onclick="closeModal()"></div>
+    </header>
+    <main class="body">
+      <p>Stay connected by subscribing to our newsletter for the latest updates.</p>
+      <form action="">
+        <input type="email" name="email" class="email" placeholder="Email Address" autocomplete="off" autofocus>
+        <button type="button" onclick="onSubscribe()">Subscribe</button>
+      </form>
+    </main>
+  </dialog>
+  <script src="app.js"></script>
+</body>
+
+</html>

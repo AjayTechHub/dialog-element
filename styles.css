@@ -1,0 +1,140 @@
+:root {
+  --white-color: #fff;
+  --dark-color: #333;
+  --text-color: var(--dark-color);
+  --primary-color: #C43535;
+  --primary-color-hover: #D83939;
+  --border-color: #999;
+  --box-shadow-color: #7f7f7f;
+
+  --font-jura: 'Jura', sans-serif;
+}
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+html {
+  font-size: 62.5%;  /* 10px as base font */
+}
+body {
+  margin: 0;
+  font-size: 1.6rem;
+  font-family: var(--font-jura);
+  font-weight: 400;
+}
+dialog {
+  border: 1px solid var(--border-color);
+  box-shadow: 2px 2px 3px 0 var(--box-shadow-color);
+  border-radius: 1.5rem;
+  width: 500px;
+  min-height: 250px;
+}
+.subscribe-btn {
+  background: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  color: var(--white-color);
+  cursor: pointer;
+  padding: 1rem 3rem;
+  border-radius: 1.5rem;
+
+  font-family: var(--font-jura);
+  font-weight: 600;
+  font-size: 1.8rem;
+
+  display: flex;
+  align-items: center;
+  margin: 3rem;
+}
+
+.subscribe-btn:hover {
+  background: var(--primary-color-hover);
+  border: 1px solid var(--primary-color);
+}
+.icon {
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+}
+.bell {
+  background: url("assets/bell.svg") no-repeat center;
+  margin-left: 1.5rem;
+
+}
+dialog::backdrop {
+  background: rgba(0, 0, 0, 0.5);
+}
+.close-btn {
+  background: url("assets/icons8-close.svg") no-repeat center;
+  width: 3.2rem;
+  height: 3.2rem;
+  cursor: pointer;
+}
+dialog header {
+  position: relative;
+  display: flex;
+}
+dialog header::before {
+  content: '';
+  position: absolute;
+  background: url("assets/envelope.svg") no-repeat;
+  width: 100px;
+  height: 100px;
+  right: 0;
+  top: 4.2rem;
+  z-index: -1;
+}
+header .close-btn {
+  margin-left: auto;
+}
+header h2 {
+  width: 100%;
+  text-align: center;
+  color: #af0000;
+}
+.body p {
+  font-weight: 600;
+  font-size: 1.5rem;
+  margin-right: 8rem;
+}
+dialog form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 4rem;
+}
+form input,
+form button {
+  height: 34px;
+  border: 1px solid var(--primary-color);
+}
+form input {
+  flex: 1;
+
+  padding-left: 1rem;
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+form input:focus-visible {
+  border-width: 1px;
+  outline: none;
+}
+form button {
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-left: none;
+
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  background: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  color: var(--white-color);
+  font-size: 1.5rem;
+  cursor: pointer;
+}
